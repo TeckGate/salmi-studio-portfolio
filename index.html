@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sami.Studio | Kurzvideos & Motion-Design</title>
+    
     <script src="https://unpkg.com/tailwindcss"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 <body class="bg-[#121212] text-white">
 
@@ -28,7 +38,7 @@
     </header>
 
     <main>
-        <section id="home" class="min-h-screen flex items-center justify-center text-center relative hero-bg">
+        <section id="home" class="min-h-screen flex items-center justify-center text-center relative">
              <div class="absolute inset-0 bg-black/60"></div>
              <div class="container mx-auto px-6 z-10">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Ich erstelle wirkungsvolle Kurzvideos & Motion-Design</h1>
@@ -41,63 +51,29 @@
         </section>
 
         <section id="leistungen" class="py-24 bg-black/20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12">Leistungen</h2>
-            </div>
+            <div class="container mx-auto px-6"><h2 class="text-4xl font-bold text-center mb-12">Leistungen</h2></div>
         </section>
-
         <section id="arbeiten" class="py-24">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12">Arbeiten</h2>
-            </div>
+            <div class="container mx-auto px-6"><h2 class="text-4xl font-bold text-center mb-12">Arbeiten</h2></div>
         </section>
-
         <section id="ueber-mich" class="py-24 bg-black/20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12">Über mich</h2>
-            </div>
+            <div class="container mx-auto px-6"><h2 class="text-4xl font-bold text-center mb-12">Über mich</h2></div>
         </section>
-
         <section id="kontakt" class="py-24">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold mb-4">Interesse geweckt?</h2>
-            </div>
+            <div class="container mx-auto px-6 text-center"><h2 class="text-4xl font-bold mb-4">Interesse geweckt?</h2></div>
         </section>
-
-<div id="portfolio-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex justify-center items-center p-4 hidden">
-    <div class="bg-gray-800 border border-gray-700 w-full max-w-4xl max-h-[90vh] rounded-lg relative flex flex-col">
-        <div class="p-4 border-b border-gray-700 flex justify-between items-center">
-            <h3 id="modal-title" class="text-xl font-bold">Project Title</h3>
-            <button id="modal-close-btn" class="text-3xl leading-none text-gray-400 hover:text-white">&times;</button>
-        </div>
-        <div class="p-6 overflow-y-auto">
-            <div id="modal-video-container" class="bg-black mb-4 aspect-video rounded-md">
-                 </div>
-            <div id="modal-description">
-                <p class="text-gray-300">Project description will go here.</p>
-            </div>
-        </div>
-    </div>
-</div>
-        
     </main>
-
+    
     <footer class="py-8 border-t border-gray-800">
-        <div class="container mx-auto px-6 text-center text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p>© 2025 Sami.Studio</p>
-            <div class="flex gap-4 text-lg">
-                <a href="#" target="_blank" class="hover:text-white transition-colors">Behance</a>
-                <a href="#" target="_blank" class="hover:text-white transition-colors">YouTube</a>
-            </div>
-            <div class="flex gap-4">
-                <a href="index-ar.html" class="hover:text-white transition-colors">AR</a>
-                <a href="index-en.html" class="hover:text-white transition-colors">EN</a>
-                <span class="text-white font-bold">DE</span>
-            </div>
-        </div>
+        <div class="container mx-auto px-6 text-center text-gray-500">© 2025 Sami.Studio</div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // الكود الآن في مكانه الصحيح 100%
+            console.log("JavaScript is running!");
+        });
+    </script>
 
-    <script src="https://unpkg.com/tailwindcss"></script>
-<script src="js/main.js"></script>
 </body>
 </html>
