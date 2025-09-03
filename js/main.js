@@ -1,45 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    // نحن لم نضف بطاقات الأعمال بعد، لذلك هذا الكود لن يجدها
+    // سنقوم بتفعيله في المرحلة القادمة بعد إضافة قسم الأعمال
+    // const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
     const modal = document.getElementById('portfolio-modal');
     const closeModalBtn = document.getElementById('modal-close-btn');
 
-    function openModal() {
-        modal.classList.remove('hidden');
+    // هذه دالة تجريبية لفتح النافذة مؤقتًا
+    // يمكنك استدعاؤها من الكونسول في المتصفح بكتابة testOpenModal()
+    window.testOpenModal = function() {
+        if (modal) {
+            modal.classList.remove('hidden');
+        }
     }
 
     function closeModal() {
-        modal.classList.add('hidden');
+        if (modal) {
+            modal.classList.add('hidden');
+        }
     }
 
-    // تم تغيير الكلاس هنا ليتوافق مع الكود الجديد
-    // انتبه: يجب أن نضيف كلاس .portfolio-item لكل بطاقة عمل في الـ HTML
-    // سأقوم بذلك في المرحلة التالية.
-
-    // الكود الحالي قد لا يعمل لأننا لم نملأ قسم الأعمال بعد.
-    // لا تقلق، سنصلحه في الخطوة التالية.
-    // الهدف الآن هو أن يختفي النص من الشاشة.
-
-    if (portfolioItems && modal && closeModalBtn) {
-        portfolioItems.forEach(item => {
-            item.addEventListener('click', () => {
-                openModal();
-            });
-        });
-
+    if (closeModalBtn) {
         closeModalBtn.addEventListener('click', closeModal);
-
+    }
+    
+    if (modal) {
         modal.addEventListener('click', (event) => {
             if (event.target === modal) {
                 closeModal();
             }
         });
-
-        window.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
-                closeModal();
-            }
-        });
     }
-});
 
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
+});
