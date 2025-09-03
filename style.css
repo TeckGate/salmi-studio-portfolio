@@ -1,9 +1,9 @@
-/* --- يطبق الخط الافتراضي على كامل الموقع --- */
+
 body {
     font-family: 'Inter', sans-serif;
 }
 
-/* --- هذا السطر يقوم بإصلاح مشكلة عدم التمرير للأسفل --- */
+
 html {
     scroll-behavior: smooth;
 }
